@@ -8,6 +8,7 @@ module Devdocker
       argument :ruby_version,   type: :string, default: nil, optional: true
 
       def copy_dockerfile
+        # TODO: retrieve those values from somewhere to take latest ruby/alpine versions
         self.alpine_version ||= '3.21'
         self.ruby_version   ||= '3.4.1'
 

@@ -25,6 +25,6 @@ class TestDevdocker < Minitest::Test
 
     assert(Dir.exist?(@name))
     assert_includes(Dir.entries(@name), 'Dockerfile.dev')
-    # assert_includes(Dir.entries(@name), 'docker-compose.yml')
+    assert_includes(Dir.entries(@name), 'docker-compose.yml')
   end
 end

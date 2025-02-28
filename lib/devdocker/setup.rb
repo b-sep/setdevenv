@@ -15,7 +15,7 @@ module Devdocker
     def build
       create_folder(path)
       create_dockerfile(path)
-      # create_docker_compose(path)
+      create_docker_compose(path)
     end
   end
 end

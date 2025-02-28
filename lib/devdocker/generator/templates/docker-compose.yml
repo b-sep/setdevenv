@@ -1,0 +1,10 @@
+services:
+  <%= path %>:
+    build:
+      context: .
+    volumes:
+      - gems:/usr/local/bundle
+      - .:/<%= path %>
+
+volumes:
+  gems:
