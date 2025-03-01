@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    devdocker (0.1.0)
+    devdock (0.1.0)
       thor (~> 1.3.2)
 
 GEM
@@ -16,7 +16,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  devdocker!
+  devdock!
   minitest
   rake (~> 13.0)
 
