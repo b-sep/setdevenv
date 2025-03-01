@@ -3,10 +3,10 @@
 module Devdocker
   module Setup::Generator
     class DockerCompose < Base
-      argument :path, type: :string
+      argument :name, type: :string
 
       def copy_docker_compose
-        template('docker-compose.yml', "#{path}/docker-compose.yml")
+        template('docker-compose.yml', "#{name}/docker-compose.yml")
       end
     end
   end

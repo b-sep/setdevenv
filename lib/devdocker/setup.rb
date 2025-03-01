@@ -6,16 +6,17 @@ module Devdocker
 
     include Generator
 
-    private attr_accessor :path
+    private attr_accessor :name
 
-    def initialize(path)
-      @path = path
+    def initialize(name)
+      @name = name
     end
 
     def build
-      create_folder(path)
-      create_dockerfile(path)
-      create_docker_compose(path)
+      create_folder(name)
+      create_dockerfile(name)
+      create_docker_compose(name)
+      create_makefile(name)
     end
   end
 end

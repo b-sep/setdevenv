@@ -3,7 +3,7 @@
 module Devdocker
   module Setup::Generator
     class Dockerfile < Base
-      argument :path, type: :string
+      argument :name, type: :string
       argument :alpine_version, type: :string, default: nil, optional: true
       argument :ruby_version,   type: :string, default: nil, optional: true
 
@@ -12,7 +12,7 @@ module Devdocker
         self.alpine_version ||= '3.21'
         self.ruby_version   ||= '3.4.1'
 
-        template('Dockerfile.dev', "#{path}/Dockerfile.dev")
+        template('Dockerfile.dev', "#{name}/Dockerfile.dev")
       end
     end
   end

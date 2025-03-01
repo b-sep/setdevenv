@@ -1,5 +1,5 @@
 FROM ruby:<%= ruby_version %>-alpine<%= alpine_version %>
-WORKDIR /<%= path %>
+WORKDIR /<%= name %>
 RUN apk update && apk upgrade
 RUN apk add bash bash-completion build-base curl git postgresql-client postgresql-dev tzdata
 

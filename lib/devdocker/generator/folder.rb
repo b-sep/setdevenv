@@ -3,10 +3,10 @@
 module Devdocker
   module Setup::Generator
     class Folder < Base
-      argument :path, type: :string
+      argument :name, type: :string
 
       def create_folder
-        empty_directory(path)
+        empty_directory(name)
       end
     end
   end
