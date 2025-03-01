@@ -2,7 +2,7 @@
 
 source 'https://rubygems.org'
 
-# Specify your gem's dependencies in devdocker.gemspec
+# Specify your gem's dependencies in devdock.gemspec
 gemspec
 
 gem 'rake', '~> 13.0'

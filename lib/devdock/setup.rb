@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Devdocker
+module Devdock
   class Setup
     require_relative './generator/generator'
 

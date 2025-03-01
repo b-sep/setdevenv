@@ -2,7 +2,7 @@
 
 require 'thor/group'
 
-module Devdocker
+module Devdock
   module Setup::Generator
     class Base < Thor::Group
       include Thor::Actions

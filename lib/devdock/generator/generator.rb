@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Devdocker
+module Devdock
   module Setup::Generator
     require_relative './base'
     require_relative './folder'

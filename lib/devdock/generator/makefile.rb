@@ -1,12 +1,12 @@
 # frozen_string_literal: true
 
-module Devdocker
+module Devdock
   module Setup::Generator
-    class Folder < Base
+    class Makefile < Base
       argument :name, type: :string
 
-      def create_folder
-        empty_directory(name)
+      def copy_makefile
+        template('Makefile', "#{name}/Makefile")
       end
     end
   end

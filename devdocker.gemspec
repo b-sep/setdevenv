@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
-require_relative 'lib/devdocker/version'
+require_relative 'lib/devdock/version'
 
 Gem::Specification.new do |spec|
-  spec.name = 'devdocker'
-  spec.version = Devdocker::VERSION
+  spec.name = 'devdock'
+  spec.version = Devdock::VERSION
   spec.authors = ['Júnior']
   spec.email = ['b.sep@live.com']
 

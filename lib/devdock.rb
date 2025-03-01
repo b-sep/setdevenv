@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
-require_relative 'devdocker/setup'
-require_relative 'devdocker/version'
+require_relative 'devdock/setup'
+require_relative 'devdock/version'
 
-module Devdocker
+module Devdock
   class << self
     def create(name)
       display_install_dependencies and return unless docker_installed?
@@ -18,7 +18,7 @@ module Devdocker
     end
 
     def display_install_dependencies
-      puts "You need to install docker to use devduck.\n" \
+      puts "You need to install docker to use devdock.\n" \
            'To information about how install it, visit: https://docs.docker.com/engine/install/'
 
       true
