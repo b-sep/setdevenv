@@ -12,7 +12,7 @@ module Devdock
         self.alpine_version ||= '3.21'
         self.ruby_version   ||= '3.4.1'
 
-        template('Dockerfile.dev', "#{name}/Dockerfile.dev")
+        template('Dockerfile.tt', "#{name}/Dockerfile.dev")
       end
     end
   end

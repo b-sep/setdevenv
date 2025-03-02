@@ -6,7 +6,7 @@ module Devdock
       argument :name, type: :string
 
       def copy_makefile
-        template('Makefile', "#{name}/Makefile")
+        template('Makefile.tt', "#{name}/Makefile")
       end
     end
   end

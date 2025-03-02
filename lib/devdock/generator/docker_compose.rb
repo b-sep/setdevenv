@@ -6,7 +6,7 @@ module Devdock
       argument :name, type: :string
 
       def copy_docker_compose
-        template('docker-compose.yml', "#{name}/docker-compose.yml")
+        template('docker-compose.tt', "#{name}/docker-compose.yml")
       end
     end
   end
