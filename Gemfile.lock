@@ -65,7 +65,7 @@ DEPENDENCIES
   cucumber (~> 9.2)
   devdock!
   minitest
-  rake (~> 13.0)
+  rake
 
 BUNDLED WITH
    2.6.3
