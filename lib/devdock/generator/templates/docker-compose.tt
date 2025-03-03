@@ -2,6 +2,7 @@ services:
   <%= name %>:
     build:
       context: .
+      dockerfile: Dockerfile.dev
     volumes:
       - gems:/usr/local/bundle
       - .:/<%= name %>

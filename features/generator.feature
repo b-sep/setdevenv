@@ -20,6 +20,7 @@ Feature: Generating files
         example:
           build:
             context: .
+            dockerfile: Dockerfile.dev
           volumes:
             - gems:/usr/local/bundle
             - .:/example
@@ -29,7 +30,5 @@ Feature: Generating files
       """
     Then the file "example/Makefile" should contain:
       """
-      bash:
-        @docker compose run --rm --service-ports example bash
-        docker compose stop
+      bash:\n\t@docker compose run --rm --service-ports example bash\n\tdocker compose stop
       """
