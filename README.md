@@ -22,4 +22,5 @@ This command will generate 3 files (***more to comming eventually***) within a f
 
 - Retrieve ruby/alpine latests version from somewhere (and cache it) 
 - Accept those versions as arguments from cli
-- Accepte an argument in cli to use rails when setuping the new environment
+- Accept an argument in cli to use rails when setuping the new environment
+- Accept an argument `--service` to create a custom service within docker-compose
