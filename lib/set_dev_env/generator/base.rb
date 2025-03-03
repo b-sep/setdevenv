@@ -2,7 +2,7 @@
 
 require 'thor/group'
 
-module Devdock
+module SetDevEnv
   module Setup::Generator
     class Base < Thor::Group
       include Thor::Actions

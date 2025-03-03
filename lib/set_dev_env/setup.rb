@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Devdock
+module SetDevEnv
   class Setup
     require_relative './generator/generator'
 

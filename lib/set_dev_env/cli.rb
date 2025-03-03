@@ -3,11 +3,11 @@
 require 'thor'
 require_relative './setup'
 
-module Devdock
+module SetDevEnv
   class CLI < Thor
     desc 'new project_name', 'generate files to a new project'
     def new(name)
-      Devdock::Setup.new(name).build
+      Setup.new(name).build
     end
   end
 end

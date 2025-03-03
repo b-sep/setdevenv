@@ -1,15 +1,15 @@
-# Devdock
+# SetDevEnv
 
 A simple gem to create a ruby dev enrionment using docker.
 
 ## Install
 
-`gem install devdock` or `bundle add devdock`
+`gem install setdevenv` or `bundle add setdevenv`
 
 ## Usage
 
 ```ruby
-devdock new example
+setdevenv new example
 ```
 
 This command will generate 3 files (***more to comming eventually***) within a folder called `example`.

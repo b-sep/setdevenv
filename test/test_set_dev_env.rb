@@ -2,7 +2,7 @@
 
 require 'test_helper'
 
-class TestDevdock < Minitest::Test
+class TestSetDevEnv < Minitest::Test
   def setup
     @name = 'example'
   end
@@ -12,7 +12,7 @@ class TestDevdock < Minitest::Test
   end
 
   def test_that_it_has_a_version_number
-    refute_nil ::Devdock::VERSION
+    refute_nil ::SetDevEnv::VERSION
   end
 
   def test_create_project
@@ -20,7 +20,7 @@ class TestDevdock < Minitest::Test
       "      create  example\n      create  example/Dockerfile.dev\n      create  example/docker-compose.yml\n" \
       "      create  example/Makefile\n"
     ) do
-      Devdock.create(@name)
+      SetDevEnv.create(@name)
     end
 
     assert(Dir.exist?(@name))

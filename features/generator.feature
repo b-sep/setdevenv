@@ -1,6 +1,6 @@
 Feature: Generating files
   Scenario: Files
-    When I run `devdock new example`
+    When I run `setdevenv new example`
     Then the following files should exist:
       | example/Dockerfile.dev |
       | example/docker-compose.yml |

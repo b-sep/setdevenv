@@ -1,21 +1,21 @@
 # frozen_string_literal: true
 
-require_relative 'lib/devdock/version'
+require_relative 'lib/set_dev_env/version'
 
 Gem::Specification.new do |spec|
-  spec.name = 'devdock'
-  spec.version = Devdock::VERSION
+  spec.name = 'setdevenv'
+  spec.version = SetDevEnv::VERSION
   spec.authors = ['Júnior']
   spec.email = ['b.sep@live.com']
 
-  spec.summary = 'A simple gem to generate a basic ruby development environment using docker/docker-compose'
-  spec.homepage = 'https://github.com/b-sep/devdock'
+  spec.summary = 'A simple gem to setup a basic ruby development environment using docker/docker-compose'
+  spec.homepage = 'https://github.com/b-sep/setdevenv'
   spec.license = 'MIT'
   spec.required_ruby_version = '>= 3.1.0'
 
   spec.metadata['homepage_uri'] = spec.homepage
-  spec.metadata['source_code_uri'] = 'https://github.com/b-sep/devdock'
-  spec.metadata['changelog_uri'] = 'https://github.com/b-sep/devdock/blob/main/CHANGELOG.md'
+  spec.metadata['source_code_uri'] = 'https://github.com/b-sep/setdevenv'
+  spec.metadata['changelog_uri'] = 'https://github.com/b-sep/setdevenv/blob/main/CHANGELOG.md'
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.

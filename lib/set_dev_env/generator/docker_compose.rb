@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Devdock
+module SetDevEnv
   module Setup::Generator
     class DockerCompose < Base
       argument :name, type: :string
