@@ -40,5 +40,7 @@ Gem::Specification.new do |spec|
   # guide at: https://bundler.io/guides/creating_gem.html
   spec.add_dependency 'thor', '~> 1.3.2'
 
+  spec.add_development_dependency 'aruba', '~> 2.3'
+  spec.add_development_dependency 'cucumber', '~> 9.2'
   spec.add_development_dependency 'minitest'
 end
