@@ -7,7 +7,7 @@ Feature: Generating files
       | example/Makefile |
     Then the file "example/Dockerfile.dev" should contain:
       """
-      FROM ruby:3.4.1-alpine3.21
+      FROM ruby:3.4.2-alpine3.21
       WORKDIR /example
       RUN apk update && apk upgrade
       RUN apk add bash bash-completion build-base tzdata
