@@ -30,6 +30,7 @@ Gem::Specification.new do |spec|
   spec.executables = spec.files.grep(%r{\Aexe/}) { |f| File.basename(f) }
   spec.require_paths = ['lib']
 
+  spec.add_dependency 'nokogiri', '~> 1.18'
   spec.add_dependency 'thor', '~> 1.3.2'
 
   spec.add_development_dependency 'aruba', '~> 2.3'

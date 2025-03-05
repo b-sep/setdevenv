@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require_relative '../version_fetcher'
+
 module SetDevEnv
   module Setup::Generator
     class Dockerfile < Base
@@ -9,8 +11,8 @@ module SetDevEnv
 
       def copy_dockerfile
         # TODO: retrieve those values from somewhere to take latest ruby/alpine versions
-        self.alpine_version ||= '3.21'
-        self.ruby_version   ||= '3.4.1'
+        self.alpine_version ||= VersionFetcher.call(resource: :alpine)
+        self.ruby_version   ||= VersionFetcher.call(resource: :ruby)
 
         template('Dockerfile.tt', "#{name}/Dockerfile.dev")
       end
