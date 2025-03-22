@@ -32,13 +32,15 @@ module SetDevEnv
 
       document = Nokogiri::HTML5(response.body)
 
-      versions = document.css('table.pure-table tr td:first-child').map do |td|
+      versions = document.css('table.pure-table tbody tr td:first-child').map do |td|
         res = td.text.gsub(/\D/, '').chars
+
+        next if res.empty?
 
         res[1, 0] = '.'
 
         res * ''
-      end.uniq
+      end.uniq.compact
 
       find_higher_version(versions)
     rescue StandardError => _e
@@ -52,7 +54,7 @@ module SetDevEnv
 
       document = Nokogiri::HTML5(response.body)
 
-      versions = document.css('table.release-list tr td:first-child').map do |td|
+      versions = document.css('table.release-list tbody tr td:first-child').map do |td|
         td.text.gsub(/\D/, '')[0..2].chars * '.'
       end.uniq
 
@@ -61,11 +63,8 @@ module SetDevEnv
       RUBY_LATEST_VERSION
     end
 
-    def find_higher_version(versions)
-      versions.map { Gem::Version.new(it) }.max.to_s
-    end
-
-    def make_request(resource) = Net::HTTP.get_response(URI(URLS[resource]))
+    def find_higher_version(versions) = versions.map { Gem::Version.new(it) }.max.to_s
+    def make_request(resource)        = Net::HTTP.get_response(URI(URLS[resource]))
 
     private_constant :ALPINE_LATEST_VERSION, :RUBY_LATEST_VERSION, :URLS
   end
