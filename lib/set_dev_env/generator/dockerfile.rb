@@ -10,7 +10,6 @@ module SetDevEnv
       argument :ruby_version,   type: :string, default: nil, optional: true
 
       def copy_dockerfile
-        # TODO: retrieve those values from somewhere to take latest ruby/alpine versions
         self.alpine_version ||= VersionFetcher.call(resource: :alpine)
         self.ruby_version   ||= VersionFetcher.call(resource: :ruby)
 
