@@ -5,4 +5,9 @@ require 'minitest/test_task'
 
 Minitest::TestTask.create
 
-task default: :test
+task default: %i[test cucumber]
+
+desc 'run cucumber features'
+task :cucumber do
+  sh 'bundle exec cucumber'
+end
