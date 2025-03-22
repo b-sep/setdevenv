@@ -8,6 +8,8 @@ PATH
 GEM
   remote: https://rubygems.org/
   specs:
+    addressable (2.8.7)
+      public_suffix (>= 2.0.2, < 7.0)
     aruba (2.3.0)
       bundler (>= 1.17, < 3.0)
       contracts (>= 0.16.0, < 0.18.0)
@@ -17,6 +19,9 @@ GEM
     bigdecimal (3.1.9)
     builder (3.3.0)
     contracts (0.17.2)
+    crack (1.0.0)
+      bigdecimal
+      rexml
     cucumber (9.2.1)
       builder (~> 3.2)
       cucumber-ci-environment (> 9, < 11)
@@ -45,6 +50,7 @@ GEM
     diff-lcs (1.6.0)
     ffi (1.17.1)
     ffi (1.17.1-x86_64-linux-gnu)
+    hashdiff (1.1.2)
     mini_mime (1.1.5)
     mini_portile2 (2.8.8)
     minitest (5.25.4)
@@ -54,8 +60,10 @@ GEM
       racc (~> 1.4)
     nokogiri (1.18.3-x86_64-linux-gnu)
       racc (~> 1.4)
+    public_suffix (6.0.1)
     racc (1.8.1)
     rake (13.2.1)
+    rexml (3.4.1)
     rspec-expectations (3.13.3)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.13.0)
@@ -63,6 +71,10 @@ GEM
     sys-uname (1.3.1)
       ffi (~> 1.1)
     thor (1.3.2)
+    webmock (3.25.1)
+      addressable (>= 2.8.0)
+      crack (>= 0.3.2)
+      hashdiff (>= 0.4.0, < 2.0.0)
 
 PLATFORMS
   ruby
@@ -74,6 +86,7 @@ DEPENDENCIES
   minitest
   rake
   setdevenv!
+  webmock
 
 BUNDLED WITH
    2.6.3
